@@ -1,0 +1,709 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Mona Sans', sans-serif;
+  background-color: #f4f0ff; 
+  color: #333;
+    margin: 0;
+      padding: 0;
+}
+
+.text-purple {
+  color: #6f42c1;
+}
+
+  .txt-dark {
+    color: #334 
+  }
+
+.btn-purple {
+  background-color: #6f42c1;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-purple:hover {
+  background-color: #5a379c;
+  color: #fff;
+}
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+  }
+
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  .transition {
+    transition: transform 0.3s ease;
+  }
+
+/* login */
+/* Background Hero Login */
+
+
+.login-hero {
+  background-image: url('../assets/image.png'); /* Ganti URL sesuai file kamu */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  /* Hapus atau ubah min-height: 100vh; */
+  /* min-height: 100vh; */ /* Hapus baris ini */
+  /* Tambahkan padding-top dan padding-bottom untuk memberikan ruang */
+  padding-top: 50px; /* Sesuaikan sesuai kebutuhan, bisa lebih besar jika navbar tinggi */
+  padding-bottom: 50px; /* Sesuaikan sesuai kebutuhan */
+  display: flex; /* Tambahkan ini */
+  align-items: center; /* Tambahkan ini */
+  justify-content: center; /* Tambahkan ini */
+}
+    .login-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    /* Card Login */
+    .login-card {
+      z-index: 2;
+      max-width: 400px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .text-purple {
+      color: #6b21a8;
+    }
+
+    /* Fokus input */
+    .form-control.custom-focus:focus {
+      border-color: #6b21a8 !important;
+      box-shadow: 0 0 0 0.2rem rgba(107, 33, 168, 0.25) !important;
+    }
+
+    /* Input + icon mata menyatu */
+    .input-group .form-control {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .input-group-text {
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: #fff;
+      cursor: pointer;
+      padding: 0 0.75rem;
+    }
+
+    .input-group-text i {
+      color: #6c757d;
+      font-size: 1rem;
+    }
+
+
+
+/* login */
+
+
+/* Register */
+.register-hero {
+  background-image: url('../assets/image.png'); /* Sama seperti login */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.register-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Card Register */
+.register-card {
+  z-index: 2;
+  max-width: 480px; /* Lebih lebar sedikit dari login-card (400px) */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Register */
+
+/* mycart navbar */
+.overlay-dark {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay-dark.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.btn-mycart {
+  border: 2px solid #9F7AEA;       
+  border-radius: 12px;            
+  color: #7C3AED;                 
+  background-color: transparent;   
+  transition: all 0.3s ease;
+}
+
+.btn-mycart i {
+  color: #7C3AED;                  
+  transition: color 0.3s ease;
+}
+
+.btn-mycart:hover {
+  background-color: #9F7AEA;       
+  color: #ffffff;                  
+  border-color: #7C3AED;          
+}
+
+.btn-mycart:hover i {
+  color: #ffffff;                 
+}
+
+/* mycart navbar */
+
+
+/* navbar */
+.but-log {
+  background: linear-gradient(90deg, #a855f7, #7c3aed);
+  color: white;
+  border: none;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  transition: 0.3s ease;
+}
+
+.but-log:hover {
+  opacity: 0.9;
+}
+
+
+.navbar-brand {
+  background: linear-gradient(to right, #b38aff, #7c4dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6f42c1;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+}
+.navbar-brand i {
+  padding-left: 2px;
+}
+
+.btn-outline-dark:hover .bi-cart {
+color: white
+}
+
+.account-name {
+white-space: nowrap;
+font-size: 0.875rem;
+font-weight: 600;
+color: #3444;
+}
+
+/* Animasi mulus dropdown */
+.custom-dropdown-animation {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  display: block !important;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.dropdown:hover .custom-dropdown-animation,
+.nav-item.dropdown.show .custom-dropdown-animation {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  height: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.hero-bg-wrapper {
+  background: #f4f0ff;
+}
+
+
+.categories-bg-wrapper {
+  background: #f4f0ff; 
+}
+/* navbar */
+
+
+
+/* Sidebar */
+/* Sidebar Gradient */
+
+#overlay-dark .overlay-dark{
+    display: none;
+  position: fixed;
+  top: 0; left: 0; 
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1040;
+}
+  .product-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .size-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+  }
+
+  .size-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #a855f7;
+    color: #a855f7;
+    background-color: white;
+    transition: 0.2s ease;
+  }
+
+  .btn-check:checked + .size-circle {
+    background-color: #a855f7 !important;
+    color: white !important;
+  }
+
+  .qty-wrapper {
+    background-color: #f3e8ff;
+    border-radius: 999px;
+    padding: 2px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    gap: 6px;
+  }
+
+  .qty-icon {
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: #6b21a8;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+    box-shadow: 0 0 0 1px #d8b4fe inset;
+  }
+
+  .qty-icon:hover {
+    background-color: #a855f7;
+    color: white;
+  }
+
+  .qty-value {
+    width: 24px;
+    text-align: center;
+    font-size: 15px;
+    color: #1e1b4b;
+  }
+
+.category-badge {
+  background-color: #e9d5ff;
+  color: #7e22ce;
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+.size-circle {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 34px;
+  font-size: 0.75rem;
+  background-color: #f5f3ff; /* opsional */
+  border: 1px solid #c4b5fd; /* opsional */
+}
+
+
+  .custom-select-purple {
+  background: #ede9fe url('data:image/svg+xml;utf8,<svg fill="%236b21a8" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 1rem center/1rem auto;
+  color: #6b21a8;
+  font-weight: 500;
+  padding-right: 2.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  appearance: none;
+}
+
+  .qty-price-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 576px) {
+    .qty-price-box {
+      margin-top: 0;
+      margin-left: auto;
+    }
+  }
+
+/* sidebar */
+
+/* hero section */
+.hero-section {
+  max-width: 1200px;
+  overflow: visible;
+  
+}
+
+
+.hero-card {
+  background: linear-gradient(to left, #b69df2, #f4e9ff); /* ungu gradasi kanan ke kiri */
+  position: relative;
+  overflow: visible;
+  min-height: 320px;
+}
+
+.gradient-futuristic {
+  background: linear-gradient(90deg, #a259ff, #3f0071);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+
+.btn-toggle-info {
+  background: transparent;
+  border: none;
+  color: #9F7AEA;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.3s;
+  text-align: left;
+}
+.btn-toggle-info:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn-toggle-info:hover {
+  color: #7C3AED;
+}
+.text-purple-light {
+  color: #9F7AEA;
+}
+.transition-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* hero section */
+
+/* Shop produk yes */
+
+.availability-dropdown .availability-list {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  background: linear-gradient(135deg, #f5f0ff, #e5dbff);
+  box-shadow: 0 4px 16px rgba(128, 0, 255, 0.2);
+  border: 1px solid #b48cff;
+}
+
+.availability-dropdown.show .availability-list {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.toggle-availability {
+  color: #7c3aed;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* Gradient radio button ungu */
+
+.custom-radio-purple .form-check-input:checked {
+  background: linear-gradient(45deg, #a259ff, #3f0071);
+  border: none;
+}
+
+.custom-radio-purple .form-check-input {
+  border: 2px solid #a259ff;
+  width: 18px;
+  height: 18px;
+}
+/* Gradient untuk radio button kategori */
+.custom-radio-purple .form-check-input:checked {
+  background: linear-gradient(45deg, #a259ff, #3f0071);
+  border: none;
+}
+
+.custom-radio-purple .form-check-input {
+  border: 2px solid #a259ff;
+  width: 18px;
+  height: 18px;
+}
+
+/* Badge untuk status */
+.bg-purple-available {
+  background: linear-gradient(90deg, #b56dff, #8854d0);
+  color: #fff;
+}
+
+.bg-purple-booked {
+  background: linear-gradient(90deg, #a259ff, #3f0071);
+  color: #fff;
+}
+
+/* Warna harga */
+.text-purple {
+  color: #7a3cff;
+}
+
+
+
+/* shop produk yes */
+
+
+
+/* Pesanan */
+
+/* Hero Card tidak boleh overflow */
+.hero-card {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Scrolling wrapper: scroll horizontal & max width penuh */
+.scrolling-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  max-width: 100%;
+  padding-bottom: 8px;
+  padding-right: 16px; /* tambahkan jarak kanan agar tidak mepet */
+}
+
+
+/* Card di dalam scroll horizontal */
+.scrolling-wrapper .card {
+  display: inline-block;
+  min-width: 250px;
+  max-width: 250px;
+  flex-shrink: 0;
+}
+
+/* Scrollbar Custom untuk wrapper horizontal */
+.scrolling-wrapper::-webkit-scrollbar {
+  height: 8px; /* Scroll horizontal */
+}
+
+.scrolling-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 255, 0.4); /* Warna biru muda transparan */
+  border-radius: 10px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 255, 0.7);
+}
+
+/* Untuk browser Firefox */
+.scrolling-wrapper {
+  scrollbar-color: rgba(100, 100, 255, 0.4) transparent;
+  scrollbar-width: thin;
+}
+  .btn-gradient-purple {
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: white;
+    border: none;
+  }
+
+  .btn-gradient-purple:hover {
+    background: linear-gradient(135deg, #7b1fa2, #3700b3);
+    color: white;
+  }
+
+  .bg-gradient-ungu {
+  background: linear-gradient(90deg, #a18cd1, #6a11cb); /* ungu muda ke ungu gelap */
+}
+
+.btn-gradient-purple {
+  background: linear-gradient(90deg, #a18cd1, #6a11cb);
+  color: white;
+  border: none;
+}
+
+.btn-gradient-purple:hover {
+  background: linear-gradient(90deg, #7b2cbf, #5f0f99);
+}
+
+.bg-purple-booked {
+  background-color: #a18cd1;
+  color: white;
+}
+
+
+
+/* Responsive agar rapi di hp */
+@media (max-width: 768px) {
+  .hero-card {
+    flex-direction: column;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+}
+
+
+/* Pesanan */
+
+
+@media (max-width: 768px) {
+  .hero-text {
+    text-align: left !important;
+  }
+}
+
+/* Transisi halus untuk collapse */
+.transition-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  overflow: visible;
+}
+
+.hero-image {
+  height: 400px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: -10px;
+}
+
+
+
+  
+
+@media (max-width: 991.98px) {
+.navbar .right-group {
+    gap: 0.25rem;
+}
+}
+
+@media (max-width: 768px) {
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image-wrapper {
+    margin-top: 1rem;
+  }
+
+  .hero-image {
+    height: 300px;
+    margin-bottom: 0;
+  }
+
+    .navbar-nav .nav-link {
+    font-size: 0.85rem;
+  }
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+.category-card:hover {
+transform: scale(1.03);
+transition: 0.3s ease-in-out;
+}
+
+footer a {
+text-decoration: none;
+}
+
+.navbar .btn {
+width: 100%;
+}
+
+
+    footer {
+      margin-top: -12px; /* naikkan sedikit untuk tutup celah visual akibat border-radius */
+      z-index: 1;
+      position: relative;
+    }
+
